@@ -1,7 +1,51 @@
-# facial_recognition_mysql
-Code to use facial recognition to access a MySQL Server
+# Facial Recognition + MySQL
 
-This code makes use of a MySQL Server to store files and users.
-They are accessed after the spaces are filled (cpf, username, password) And the information matches that on the server
-The path to the image used as database needs to be changed on the Face_Recog.py before using (more than one face can be added)
-The same goes for the connector on the MySQL_Connect.py
+A Python proof-of-concept authentication system that combines MySQL credential validation with webcam-based facial recognition.
+
+The application is designed to:
+
+1. Validate a user’s CPF, name, and password against MySQL.
+2. Retrieve the user’s data based on the given ID.
+3. Compare the user’s webcam image with a stored reference face.
+4. Retrieve files associated with the authenticated user.
+
+## Features
+
+- MySQL-based user lookup
+- CPF, name, and password validation
+- Webcam capture using OpenCV
+- Facial recognition using the `face_recognition` library
+- File lookup associated with a user
+- Basic visual feedback around detected faces
+
+## Requirements
+
+- Python 3.9 or newer
+- MySQL Server 8 or newer
+
+# Python dependencies:
+
+The following can be installed with pip install
+```text
+opencv-python
+face-recognition
+mysql-connector-python
+numpy
+```
+# Database Setup
+
+Setup can be done with the given database.sql file. Run it from a terminal with:
+```text
+mysql -u root -p < database.sql
+```
+
+## Project Structure
+
+```text
+facial\_recognition\_mysql/
+├── src/
+│   ├── Face\_Recog.py
+|   ├── MySQL\_Connect.py
+|   ├── Qt\_Gui.py
+│   └── design\_frame.ui
+└── README.md
