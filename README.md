@@ -23,7 +23,7 @@ The application is designed to:
 - Python 3.9 or newer
 - MySQL Server 8 or newer
 
-# Python dependencies:
+## Python dependencies:
 
 The following can be installed with pip install
 ```text
@@ -31,21 +31,15 @@ opencv-python
 face-recognition
 mysql-connector-python
 numpy
+PyQt5
 ```
-# Database Setup
+## Database Setup
 
 Setup can be done with the given database.sql file. Run it from a terminal with:
 ```text
 mysql -u root -p < database.sql
 ```
 
-## Project Structure
+## Getting Started
 
-```text
-facial\_recognition\_mysql/
-├── src/
-│   ├── Face\_Recog.py
-|   ├── MySQL\_Connect.py
-|   ├── Qt\_Gui.py
-│   └── design\_frame.ui
-└── README.md
+Project can be started by running the Qt_Gui.py and starting the UI
